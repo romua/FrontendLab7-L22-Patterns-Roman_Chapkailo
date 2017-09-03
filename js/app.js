@@ -2,7 +2,6 @@ class User {
     constructor() {
         this.lastVisitDate = new Date(2017, this.getRandomIntInclusive(0,11),this.getRandomIntInclusive(1,32));
         if(this.lastVisitDate-(new Date())>0) {
-
             this.lastVisitDate = new Date();
         }
         this.globalDiscount = 0.05;
@@ -13,7 +12,6 @@ class User {
         this.bonus = this.getRandomIntInclusive(0, 150);
 
     }
-
     getRandomIntInclusive(min, max) {
         min = Math.ceil(min);
         max = Math.floor(max);
@@ -29,7 +27,6 @@ function getDiscount() {
     let todayDate = new Date();//0 - sun/нд 6 - sa/сб
     console.log(todayDate.getDay(), newUser.lastVisitDate, newUser.lastVisitDate.getDay());
     function isNight() {
-
         return (todayDate.getHours() >= 23 && todayDate.get() <=5)
     }
     function isWeekEnd() {
@@ -67,5 +64,5 @@ function getBonus() {
 }
 
 console.log(getDiscount());
-console.log('*****************************************************')
+console.log('*****************************************************');
 console.log(getBonus());
